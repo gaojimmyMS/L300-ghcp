@@ -21,10 +21,7 @@ jobs:
       - name: Log in to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ fromJson(secrets.AZURE_CREDENTIALS).clientId }}
-          tenant-id: ${{ fromJson(secrets.AZURE_CREDENTIALS).tenantId }}
-          subscription-id: ${{ fromJson(secrets.AZURE_CREDENTIALS).subscriptionId }}
-          client-secret: ${{ fromJson(secrets.AZURE_CREDENTIALS).clientSecret }}
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Log in to ACR
         run: az acr login --name ${{ vars.AZURE_ACR_NAME }}
