@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: zavastore
+metadata:
+  template: zavastore-infra
+services:
+  web:
+    project: ./src/ZavaStorefront.csproj
+    host: appservice
+    language: dotnet
+    docker:
+      path: ./Dockerfile
+      context: .

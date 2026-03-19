@@ -1,0 +1,15 @@
+.git
+.github
+.devcontainer
+docs
+media
+infra
+**/bin
+**/obj
+**/node_modules
+*.md
+LICENSE
+Gemfile
+Gemfile.lock
+_config.yml
+index.md
